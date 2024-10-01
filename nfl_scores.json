@@ -1,0 +1,178 @@
+[
+  {
+    "date": "",
+    "away": {
+      "team_name": "Titans",
+      "score": "9"
+    },
+    "home": {
+      "team_name": "Dolphins",
+      "score": "6"
+    }
+  },
+  {
+    "date": "",
+    "away": {
+      "team_name": "Seahawks",
+      "score": "7"
+    },
+    "home": {
+      "team_name": "Lions",
+      "score": "21"
+    }
+  },
+  {
+    "date": "",
+    "away": {
+      "team_name": "Cowboys",
+      "score": "20"
+    },
+    "home": {
+      "team_name": "Giants",
+      "score": "15"
+    }
+  },
+  {
+    "date": "",
+    "away": {
+      "team_name": "Saints",
+      "score": "24"
+    },
+    "home": {
+      "team_name": "Falcons",
+      "score": "26"
+    }
+  },
+  {
+    "date": "",
+    "away": {
+      "team_name": "Rams",
+      "score": "18"
+    },
+    "home": {
+      "team_name": "Bears",
+      "score": "24"
+    }
+  },
+  {
+    "date": "",
+    "away": {
+      "team_name": "Vikings",
+      "score": "31"
+    },
+    "home": {
+      "team_name": "Packers",
+      "score": "29"
+    }
+  },
+  {
+    "date": "",
+    "away": {
+      "team_name": "Steelers",
+      "score": "24"
+    },
+    "home": {
+      "team_name": "Colts",
+      "score": "27"
+    }
+  },
+  {
+    "date": "",
+    "away": {
+      "team_name": "Broncos",
+      "score": "10"
+    },
+    "home": {
+      "team_name": "Jets",
+      "score": "9"
+    }
+  },
+  {
+    "date": "",
+    "away": {
+      "team_name": "Eagles",
+      "score": "16"
+    },
+    "home": {
+      "team_name": "Buccaneers",
+      "score": "33"
+    }
+  },
+  {
+    "date": "",
+    "away": {
+      "team_name": "Bengals",
+      "score": "34"
+    },
+    "home": {
+      "team_name": "Panthers",
+      "score": "24"
+    }
+  },
+  {
+    "date": "",
+    "away": {
+      "team_name": "Jaguars",
+      "score": "20"
+    },
+    "home": {
+      "team_name": "Texans",
+      "score": "24"
+    }
+  },
+  {
+    "date": "",
+    "away": {
+      "team_name": "Commanders",
+      "score": "42"
+    },
+    "home": {
+      "team_name": "Cardinals",
+      "score": "14"
+    }
+  },
+  {
+    "date": "",
+    "away": {
+      "team_name": "Patriots",
+      "score": "13"
+    },
+    "home": {
+      "team_name": "49ers",
+      "score": "30"
+    }
+  },
+  {
+    "date": "",
+    "away": {
+      "team_name": "Browns",
+      "score": "16"
+    },
+    "home": {
+      "team_name": "Raiders",
+      "score": "20"
+    }
+  },
+  {
+    "date": "",
+    "away": {
+      "team_name": "Chiefs",
+      "score": "17"
+    },
+    "home": {
+      "team_name": "Chargers",
+      "score": "10"
+    }
+  },
+  {
+    "date": "",
+    "away": {
+      "team_name": "Bills",
+      "score": "10"
+    },
+    "home": {
+      "team_name": "Ravens",
+      "score": "35"
+    }
+  }
+]

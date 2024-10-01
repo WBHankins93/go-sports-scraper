@@ -17,6 +17,7 @@ type TeamScore struct {
 
 // Struct to represent a match between two teams
 type Match struct {
+	Date string    `json:"date"`
 	Away TeamScore `json:"away"`
 	Home TeamScore `json:"home"`
 }
@@ -32,26 +33,41 @@ func main() {
 	url := "https://www.espn.com/nfl/scoreboard"
 
 	// Callback for when a "Scoreboard_Row" is found
-	c.OnHTML(".Scoreboard_Row", func(e *colly.HTMLElement) {
+	c.OnHTML(".ScoreboardScoreCell", func(e *colly.HTMLElement) {
 		var awayTeam, homeTeam TeamScore
 
-		// Extract the away team name and score
-		e.ForEach(".ScoreCell__Item--away", func(_ int, el *colly.HTMLElement) {
-			awayTeam.TeamName = el.ChildText(".ScoreCell__Team")
-			awayTeam.Score = el.ChildText(".ScoreCell__Score") // Placeholder for the actual score class
-		})
+		// Extract the game date
+		date := e.DOM.Find(".Card__Header__Title").Text()
 
-		// Extract the home team name and score
-		e.ForEach(".ScoreCell__Item--home", func(_ int, el *colly.HTMLElement) {
-			homeTeam.TeamName = el.ChildText(".ScoreCell__Team")
-			homeTeam.Score = el.ChildText(".ScoreCell__Score") // Placeholder for the actual score class
-		})
+		// Extract team names and scores
+		teams := e.ChildTexts(".ScoreCell__TeamName")
+		scores := e.ChildTexts(".ScoreCell__Score")
 
-		// Append to results
-		results = append(results, Match{
-			Away: awayTeam,
-			Home: homeTeam,
-		})
+		// Handle missing scores
+		if len(scores) < 2 {
+			scores = []string{"-", "-"}
+		}
+
+		// Populate away and home teams
+		if len(teams) == 2 {
+			awayTeam.TeamName = teams[0]
+			homeTeam.TeamName = teams[1]
+		}
+
+		// Populate scores if available
+		if len(scores) == 2 {
+			awayTeam.Score = scores[0]
+			homeTeam.Score = scores[1]
+		}
+
+		// Append to results if valid date is found
+		if awayTeam.TeamName != "" && homeTeam.TeamName != "" {
+			results = append(results, Match{
+				Date: date,
+				Away: awayTeam,
+				Home: homeTeam,
+			})
+		}
 	})
 
 	// OnRequest callback to log URL being visited
