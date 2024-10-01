@@ -17,28 +17,33 @@ This project is a simple web scraper built with Go (`golang`) that scrapes NFL g
 ### Prerequisites
 
 - **Go (Golang)**: Make sure you have Go installed on your system. You can download it [here](https://golang.org/dl/).
-- **Colly Library**: The scraper uses the `colly` package. Install it using:
-    ```go get github.com/gocolly/colly/v2```
+- **Colly Library**: The scraper uses the `colly` package. 
+Install it using:
+    ```
+    go get github.com/gocolly/colly/v2
+    ```
 
 ### Installation
 
 1. **Clone the Repository**
    ```
-   git clone https://github.com/yourusername/nfl-score-scraper.git
+   git clone https://github.com/WBHankins93/nfl-score-scraper.git
    cd nfl-score-scraper 
    ```
 
-**Build the Project**
+2. **Build the Project**
 
 If you want to build the project and create an executable, run:
-bash
-Copy code
+```
 go build scraper.go
+```
 
-**Run the Scraper**
+3. **Run the Scraper**
 
 You can run the scraper with:
-```go run scraper.go```
+```
+go run scraper.go
+```
 This will scrape the NFL scoreboard for the specified week, year, and season type and save the data in nfl_scores.json.
 
 Future Plans
